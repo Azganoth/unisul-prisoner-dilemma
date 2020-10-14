@@ -8,6 +8,24 @@ Implementação do dilema do prisioneiro utilizando o protocolo XML-RPC para a m
 
 -   Python 3.8+
 
+> Cada servidor deve ser iniciado em um terminal ou aba de terminal.
+
+Primeiramente, devemos deixar o servidor "Juíz", que realizará o julgamento de dois prisioneiros por vez, disponível e aguardando os testemunhos.
+
+Para isso, vamos iniciar o servidor "Juíz":
+
+```sh
+python judge.py
+```
+
+Com o servidor "Juíz" aguardando testemunhos, podemos começar a questionar os prisioneiros pelo seus testemunhos.
+
+Para isso, vamos iniciar um servidor "Prisioneiro" para cada prisioneiro, onde cada um irá aguardar pelo seu julgamento após enviar seu testemunho:
+
+```sh
+python prisioner.py
+```
+
 ## 🔗 Referências
 
 - [Dilema do prisioneiro](https://pt.wikipedia.org/wiki/Dilema_do_prisioneiro)
